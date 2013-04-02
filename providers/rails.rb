@@ -126,6 +126,7 @@ action :before_symlink do
     execute command do
       cwd new_resource.release_path
       user new_resource.owner
+      group new_resource.group
       environment new_resource.environment
     end
   end
